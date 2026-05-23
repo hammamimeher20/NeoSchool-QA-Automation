@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="tests.TC03_CreerTrimestre">
+        <methods>
+          <include name="sauvegarderRapport"/>
+          <include name="TC03_creerTrimestre"/>
+          <include name="ouvrirBrowserEtSeConnecter"/>
+          <include name="initialiserRapport"/>
+          <include name="fermerBrowser"/>
+        </methods>
+      </class> <!-- tests.TC03_CreerTrimestre -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

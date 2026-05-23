@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="NeoSchool Automation Suite"
+	verbose="1"
+	parallel="tests"
+	thread-count="4">
+
+	<!-- Parameters -->
+	<parameter name="browser" value="chrome" />
+	<parameter name="baseUrl" value="https://qa.neoschool.com" />
+
+	<!-- Academic Year -->
+	<test name="AcademicYear">
+		<classes>
+			<class name="tests.TC02_CreerAnneeAcademique" />
+			<class name="tests.TC09_SelectionnerAnneeCourante" />
+		</classes>
+	</test>
+
+	<!-- Core features -->
+	<test name="CoreFeatures">
+		<classes>
+			<class name="tests.TC03_CreerTrimestre" />
+			<class name="tests.TC04_CreerEtudiant" />
+			<class name="tests.TC05_CreerEnseignant" />
+			<class name="tests.TC06_CreerNiveau" />
+			<class name="tests.TC07_CreerClasseInfosIncompletes" />
+			<class name="tests.TC08_CreerClasseInfosValides" />
+		</classes>
+	</test>
+
+	<!-- Admin -->
+	<test name="Admin">
+		<classes>
+			<class name="tests.TC10_ModifierAdministrateurEcole" />
+		</classes>
+	</test>
+
+</suite>
