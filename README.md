@@ -41,32 +41,36 @@ NeoSchool-QA-Automation/
 │   └── test/
 │       └── java/
 │           ├── base/
-│           │   └── BaseTest.java          # Setup/Teardown + ExtentReports
+│           │   └── BaseTest.java                        # Setup/Teardown + ExtentReports
 │           ├── pages/
-│           │   ├── BasePage.java          # Méthodes communes (saisir, cliquer…)
+│           │   ├── BasePage.java                        # Méthodes communes (saisir, cliquer…)
 │           │   ├── LoginPage.java
 │           │   ├── DashboardPage.java
 │           │   ├── AcademicYearPage.java
 │           │   ├── TermPage.java
 │           │   ├── SchoolPage.java
-│           │   ├── AdminPage.java
+│           │   ├── EditAdminPage.java
 │           │   ├── TeacherPage.java
 │           │   ├── LevelPage.java
-│           │   └── ClassPage.java
+│           │   ├── ClassPage.java
+│           │   ├── CoursePage.java
+│           │   └── StudentPage.java
 │           └── tests/
-│               ├── TC01_CreerEcole.java
+│               ├── TC01_SeConnecterANeoschool.java
 │               ├── TC02_CreerAnneeAcademique.java
 │               ├── TC03_CreerTrimestre.java
-│               ├── TC04_CreerAdmin.java
+│               ├── TC04_CreerEtudiant.java
 │               ├── TC05_CreerEnseignant.java
 │               ├── TC06_CreerNiveau.java
-│               └── TC07_CreerClasse.java
+│               ├── TC07_CreerClasseInfosIncompletes.java
+│               ├── TC08_CreerClasseInfosValides.java
+│               └── TC09_SelectionnerAnneeCourante.java
 │
 ├── test-output/
-│   └── custom-report/                     # Rapports HTML générés
+│   └── custom-report/                                   # Rapports HTML générés
 │
-├── testng.xml                             # Suite de tests
-├── pom.xml                                # Dépendances Maven
+├── testng.xml                                           # Suite de tests
+├── pom.xml                                              # Dépendances Maven
 └── README.md
 ```
 
@@ -76,13 +80,15 @@ NeoSchool-QA-Automation/
 
 | ID | Module | Description | Statut |
 |---|---|---|---|
-| TC-01 | École | Créer une école | ✅ |
+| TC-01 | Authentification | Se connecter à NeoSchool | ✅ |
 | TC-02 | Année académique | Créer l'année 2026/2027 | ✅ |
 | TC-03 | Trimestre | Créer les 3 trimestres | ✅ |
-| TC-04 | Admin | Créer un administrateur | ✅ |
+| TC-04 | Étudiant | Créer un étudiant | ✅ |
 | TC-05 | Enseignant | Créer un enseignant | ✅ |
 | TC-06 | Niveau | Créer un niveau scolaire | ✅ |
-| TC-07 | Classe | Créer une classe | ✅ |
+| TC-07 | Classe | Créer une classe avec infos incomplètes | ✅ |
+| TC-08 | Classe | Créer une classe avec infos valides | ✅ |
+| TC-09 | Année académique | Sélectionner l'année courante | ✅ |
 
 ---
 
@@ -115,7 +121,7 @@ BaseTest (setup/teardown/rapport)
 
 ```bash
 # Cloner le projet
-git clone https://github.com/TON_USERNAME/NeoSchool-QA-Automation.git
+git clone https://github.com/hammamimeher20/NeoSchool-QA-Automation.git
 cd NeoSchool-QA-Automation
 
 # Lancer toute la suite
@@ -150,7 +156,7 @@ Le rapport ExtentReports inclut :
 ## 🔍 Bonnes pratiques appliquées
 
 - ✅ Pattern **Page Object Model** strict
-- ✅ **`@BeforeMethod`** centralisé dans `BaseTest` (login unique)
+- ✅ `@BeforeMethod` centralisé dans `BaseTest` (login unique, pas de duplication)
 - ✅ Locators robustes (`By.xpath` pour les IDs avec caractères spéciaux)
 - ✅ `WebDriverWait` explicite (pas de `Thread.sleep`)
 - ✅ Rapports automatiques avec **ExtentReports**
@@ -165,10 +171,10 @@ Le rapport ExtentReports inclut :
 QA Test Automation Engineer  
 📍 Tunisie  
 🎓 BeeOne Academy — QA MasterClass (2026)  
-
+🔗 [LinkedIn](https://www.linkedin.com/in/meher1-hammami)
 
 ---
 
 ## 📄 Licence
 
-Ce projet est réalisé à des fins pédagogiques et de démonstration portfolio.
+Ce projet est réalisé à des fins pédagogiques et de démonstration portfolio.ques et de démonstration portfolio.
