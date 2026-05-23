@@ -177,4 +177,4 @@ QA Test Automation Engineer
 
 ## 📄 Licence
 
-Ce projet est réalisé à des fins pédagogiques et de démonstration portfolio.ques et de démonstration portfolio.
+Ce projet est réalisé à des fins pédagogiques .
