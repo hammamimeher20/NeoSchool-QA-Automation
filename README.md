@@ -112,7 +112,7 @@ BaseTest (setup/teardown/rapport)
 
 ### Prérequis
 
-- Java 11+ installé
+- Java 25+ installé
 - Maven installé
 - Google Chrome installé
 - Connexion internet (WebDriverManager télécharge ChromeDriver automatiquement)
